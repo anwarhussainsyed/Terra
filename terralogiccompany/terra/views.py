@@ -22,8 +22,6 @@ def signup(request):
             email=request.POST.get('email')
             form.save()
             messages.success(request,"account created successfully")
-            message = f'Hi {uname}, thank you for registering in TerraBlog Community'
-            send_mail("Registration Successfull",message,"2100030498@kluniversity.in",[email], fail_silently=False,)
             return redirect('login')
         
     context={'form':form}
