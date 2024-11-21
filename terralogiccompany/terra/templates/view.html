@@ -1,0 +1,82 @@
+<div class='container mx-auto min-h-[800px] mb-14'>
+    <div class='flex flex-col lg:flex-row lg:items-center lg:justify-between'>
+        <div>
+            <h2 class='text-2xl font-semibold'>{{viewblog.name}}</h2>
+            <h3 class='text-lg mb-4'></h3>
+        </div>
+        <div class='mb-4 lg:mb-0 flex gap-x-2 text-sm'>
+            <div class='bg-green-500 rounded-full text-white px-3 inline-block'>
+                {{viewblog.blog_type}}
+            </div>
+            <div class='bg-violet-500 rounded-full text-white px-3 inline-block'>
+            </div>
+        </div>
+        <div class='text-3xl font-semibold text-violet-600'>
+        </div>
+    </div>
+    <div class='flex flex-col items-start gap-8 lg:flex-row'>
+        <div class='max-w-[768px]'>
+            <div class='mb-100'>
+                <img src="{{viewblog.blog_image.url}}" alt='' />
+            </div>
+            <div class='flex gap-x-6 text-violet-700 mb-6'>
+                <div class='flex gap-x-2 items-center'>
+                    <BiBed class='text-2xl' />
+                    <div class='text-lg font-medium'></div>
+                </div>
+                <div class='flex gap-x-2 items-center'>
+                    <BiBath class='text-2xl' />
+                    <div class='text-lg font-medium'></div>
+                </div>
+                <div class='flex gap-x-2 items-center'>
+                    <BiArea class='text-2xl' />
+                    <div class='text-lg font-medium'></div>
+                </div>
+            </div>
+            <p></p>
+        </div>
+        <div class='flex-1 w-full mb-8 bg-white border border-gray-300 rounded-lg px-6 py-8'>
+            <div class='flex items-center gap-x-4 mb-8'>
+                <div class='w-20 h-20 p-1 border border-gray-300 rounded-full'>
+
+                </div>
+                <div>
+                    <div class='font-bold text-lg'></div>
+                    <div class='font-bold text-lg'></div>
+                    <Link to='' class='text-violet-700 text-sm'>
+                    View listings
+                    </Link>
+                </div>
+            </div>
+            <form class='flex flex-col gap-y-4'>
+                <input
+                    class='border border-gray-300 focus:border-violet-700 rounded w-full px-4 h-14 text-sm outline-none'
+                    type='text' placeholder='Name*' />
+                <input
+                    class='border border-gray-300 focus:border-violet-700 rounded w-full px-4 h-14 text-sm outline-none'
+                    type='text' placeholder='Email*' />
+                <input
+                    class='border border-gray-300 focus:border-violet-700 rounded w-full px-4 h-14 text-sm outline-none'
+                    type='text' placeholder='Phone*' />
+                <textarea
+                    class='border border-gray-300 focus:border-violet-700 rounded w-full p-4 h-36 text-sm text-gray-400 outline-none resize-none'
+                    type='text' placeholder='Message*' defaultValue='Hello, I am interested in [Modern apartment]' />
+                <div class='flex gap-x-2'>
+                    <button class='bg-violet-700 hover:bg-violet-800 text-white rounded p-4 text-sm w-full transition'
+                        type='submit'>
+                        Send message
+                    </button>
+                    <button
+                        class='border border-violet-700 text-violet-700 hover:border-purple-600 hover:text-purple-600 rounded p-4 text-sm w-full transition'>
+                        Call
+                    </button>
+
+
+                </div>
+                <div>
+                    <Maps />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
